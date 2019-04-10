@@ -40,6 +40,7 @@ public class MyMath {
     public static void main(String[] args) throws Exception{
         MyMath test = new MyMath();
         test.test();
+        System.out.println("hah");
 
     }
 }

@@ -42,6 +42,6 @@ public class MyMath {
         test.test();
         System.out.println("hah");
         System.out.println("hah");
-        System.out.println("hah");
+
     }
 }

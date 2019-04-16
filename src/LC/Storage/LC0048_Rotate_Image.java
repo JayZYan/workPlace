@@ -17,22 +17,27 @@ public class LC0048_Rotate_Image {
         int temp;
         for (int i = 0 ; i < size - 1; i++) {
             temp = matrix[offset][offset + i];
+//            System.out.println("Temp is " + temp);
+//            System.out.println("offset is " + offset);
+//            System.out.println("size is " + size);
+//            System.out.println("i is  " + i);
             matrix[offset][offset + i] = matrix[offset + size - 1 - i][offset];
             matrix[offset + size - 1 - i][offset] = matrix[offset + size - 1][offset + size - 1 - i];
             matrix[offset + size - 1][offset + size - 1 - i] = matrix[offset + i][offset + size - 1];
             matrix[offset + i][offset + size - 1]= temp;
+            ArrayPrinter.print(matrix);
         }
         rotate90(matrix, offset + 1, size - 2);
     }
     public static void main(String[] args) {
-        int[][] matrix1 = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+        int[][] matrix1 = {{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
         int[][] matrix2 = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
         int[][] matrix = {{3},{2}};
         int[][] matrix4 = {{1,2,3},{4,5,6},{7,8,9}};
-        ArrayPrinter.print(matrix4);
+        ArrayPrinter.print(matrix1);
 
-        rotate(matrix4);
-        ArrayPrinter.print(matrix4);
+        rotate(matrix1);
+        ArrayPrinter.print(matrix1);
 
     }
 }

@@ -6,7 +6,7 @@ public class ParkingLot {
     public ParkingLot(int numOfLevel) {
         levels = new Level[numOfLevel];
         for (int i = 0; i < numOfLevel; i++) {
-            levels[i] = new Level(i, 20,60,20);
+            levels[i] = new Level(i, 20, 60, 20);
         }
     }
     public boolean canPark(Vehicle car) {
